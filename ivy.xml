@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<ivy-module 
+	version="2.0" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://ant.apache.org/ivy/schemas/ivy.xsd">
+    
+    <info organisation="org.apache" module="hello-ivy"/>    
+    
+    <dependencies>        
+    	<dependency org="commons-lang" name="commons-lang" rev="2.0"/>
+    	<dependency org="commons-cli"  name="commons-cli"  rev="1.0"/>
+    	
+    	<dependency org="gw" name="gosu" rev="0.8.6.1">
+      		<exclude module="servlet-api"/>
+    	</dependency>
+    	
+    	<dependency org="dstovall" name="onejar-maven-plugin"  rev="1.4.4"/>
+    	
+	</dependencies>
+	
+</ivy-module>
+	

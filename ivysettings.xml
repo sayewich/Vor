@@ -1,0 +1,34 @@
+<ivysettings>
+  <settings defaultResolver="default"/>
+  <include url="${ivy.default.settings.dir}/ivysettings-local.xml"/>
+  <!--  <include url="${ivy.default.settings.dir}/ivysettings-local.xml"/>  -->
+  <resolvers>
+    <chain name="default" returnFirst="true" >
+      <resolver ref="local"/>
+      <url name="gosu-lang">
+        <ivy      pattern="http://gosu-lang.org/downloads/ivy/[revision]/[type]s/[artifact].[ext]"/>
+        <artifact pattern="http://gosu-lang.org/downloads/ivy/[revision]/[type]s/[artifact].[ext]"/>
+      </url>
+      
+      <url name="onejar" m2compatible="true">
+		<ivy      pattern="http://onejar-maven-plugin.googlecode.com/svn/mavenrepo/org/dstovall/[artifact]/[revision]/[artifact]-[revision].[ext]"/>
+        <artifact pattern="http://onejar-maven-plugin.googlecode.com/svn/mavenrepo/org/dstovall/[artifact]/[revision]/[artifact]-[revision].[ext]"/>
+      </url>
+      
+      
+      <ibiblio name="maven2" m2compatible="true"/>
+      <!--  
+      <url name="antsource">
+        <artifact pattern="http://archive.apache.org/dist/ant/source/[artifact]-[revision]-src.zip"/>
+      </url>
+      -->
+      
+      <!--
+       <filesystem name="libraries">        
+          <artifact pattern="${ivy.settings.dir}/repository/[artifact]-[revision].[ext]" />      
+       </filesystem>      
+       -->
+        </chain>
+  </resolvers>
+</ivysettings>
+
